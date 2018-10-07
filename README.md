@@ -2,8 +2,14 @@
 
 ## 下载本仓库后
 
-* 第1步：运行deeplab_start.sh 脚本，拉取源码仓库和创建文件夹等一键完成
-* 第2步：编译源码caffe,会遇到一些问题如下：
+数据：
+* 进入data文件夹，运行dowload_data.sh,将会下载好data并做好数据处理
+
+配置环境：
+* 第1步：安装matio
+ [参考博客](https://blog.csdn.net/legalhighhigh/article/details/82953736)
+* 第2步：运行deeplab_start.sh 脚本，拉取源码仓库和创建文件夹等一键完成
+* 第3步：编译源码caffe,会遇到一些问题如下：
   <p> 1、./include/caffe/common.cuh(9): error: function "atomicAdd(double *, double)" has already been defined</p>
   <p>
     原因是CUDA 8.0 提供了对atomicAdd函数的定义，但atomicAdd在之前的CUDA toolkit中并未出现，因此一些程序自定义了atomicAdd函数。解决方法：打   开./include/caffe/common.cuh文件，在atomicAdd前添加宏判断即可。如下：
@@ -60,7 +66,7 @@
     ../lib/libcaffe.so.1.0.0-rc3: undefined reference to `Mat_Close'
     ```
     解决方法： 
-    下载FindMATIO.cmake.zip文件，解压缩后拷贝到./cmake/Modules目录中。(解压后的文件在文件及others里)
+    下载FindMATIO.cmake.zip文件，解压缩后拷贝到./cmake/Modules目录中。(解压后的文件在文件已经在others里)
     [文件下载路径](https://github.com/TheLegendAli/DeepLab-Context/files/453735/FindMATIO.cmake.zip)
     并添加以下代码至./cmake/Dependencies.cmake文件中
 
@@ -73,3 +79,5 @@
     这样基本能正常编译caffe了。
     以上基本就是整个环境配置的全过程，接下来就是开始把deeplab_v2跑起来了。
   </a>
+  
+  运行run.sh即可。
