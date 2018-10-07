@@ -2,7 +2,8 @@
 ###
 # author :leekaka
 ###
-echo "正在下载..."
+
+echo "正在下载model并解压..."
 wget http://liangchiehchen.com/projects/released/deeplab_aspp_vgg16/prototxt_and_model.zip
 unzip prototxt_and_model.zip
 echo "解压完毕"
