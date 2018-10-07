@@ -16,3 +16,17 @@ tar -xvf VOCtrainval_11-May-2012.tar
 mv VOCdevkit/VOC2012 VOC2012_orig && rm -r VOCdevkit
 
 echo "下载完成"
+
+echo "开始第一步，增强数据集mat2png的转换..."
+./data_aug.sh
+echo "转换完成"
+
+echo "开始第二步，原始数据集转换标签..."
+./convert.labels.sh
+
+echo "完成"
+echo "开始合并数据集"
+./merge.sh
+
+
+

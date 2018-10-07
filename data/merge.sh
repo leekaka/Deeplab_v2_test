@@ -21,4 +21,4 @@ cd ../SegmentationClassAug
 ls -l | grep "^-" | wc -l
 
 
-
+echo "完成"

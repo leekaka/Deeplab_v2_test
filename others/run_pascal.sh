@@ -1,16 +1,16 @@
 #!/bin/sh
 
 ## MODIFY PATH for YOUR SETTING
-ROOT_DIR=
+ROOT_DIR=../../data/deeplab/DL_dataset
 
-CAFFE_DIR=../code
-CAFFE_BIN=${CAFFE_DIR}/.build_release/tools/caffe.bin
+CAFFE_DIR=../../deeplab-public-ver2
+CAFFE_BIN=${CAFFE_DIR}/build/tools/caffe
 
-EXP=voc12
+EXP=.
 
-if [ "${EXP}" = "voc12" ]; then
+if [ "${EXP}" = "." ]; then
     NUM_LABELS=21
-    DATA_ROOT=${ROOT_DIR}/rmt/data/pascal/VOCdevkit/VOC2012
+    DATA_ROOT=${ROOT_DIR}/VOC_aug/dataset/
 else
     NUM_LABELS=0
     echo "Wrong exp name"
@@ -19,12 +19,12 @@ fi
 
 ## Specify which model to train
 ########### voc12 ################
-NET_ID=deelab_largeFOV
+NET_ID=deeplab_largeFOV
 
 
 ## Variables used for weakly or semi-supervisedly training
 #TRAIN_SET_SUFFIX=
-#TRAIN_SET_SUFFIX=_aug
+TRAIN_SET_SUFFIX=_aug
 
 #TRAIN_SET_STRONG=train
 #TRAIN_SET_STRONG=train200
@@ -50,7 +50,7 @@ export GLOG_log_dir=${LOG_DIR}
 ## Run
 
 RUN_TRAIN=1
-RUN_TEST=1
+RUN_TEST=0
 RUN_TRAIN2=0
 RUN_TEST2=0
 
