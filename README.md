@@ -1,3 +1,6 @@
-# Deeplab_v2_test
+# deeplab_v2使用笔记
 
-deeplab_v2使用笔记
+## 下载本仓库后
+
+* 第1步：运行deeplab_start.sh 脚本，拉取源码仓库和创建文件夹等一键完成
+* 第2步：编译源码caffe,会遇到一些问题如下：
