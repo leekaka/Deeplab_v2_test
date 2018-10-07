@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd ./deep_lab/deeplab_public_ver2
+cd ./deeplab_public_ver2
 
 mkdir build
 cd build
