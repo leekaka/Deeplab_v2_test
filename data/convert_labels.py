@@ -19,7 +19,7 @@ def main():
   if not os.path.isdir(path_converted):
     os.makedirs(path_converted)
 
-  with open(txt_file, 'rb') as f:
+  with open(txt_file, 'r') as f:
     for img_name in f:
       img_base_name = img_name.strip()
       img_name = os.path.join(path, img_base_name) + ext
