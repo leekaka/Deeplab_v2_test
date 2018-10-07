@@ -14,4 +14,7 @@ mv *caffemodel ./exper/voc12/model/deeplab_largeFOV
 rm -rf *.prototxt
 rm -rf *caffemodel
 
-echo "完成"
+echo "开始转移list.."
+./mvlist.sh
+
+echo "完成，接下来走第二步"

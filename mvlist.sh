@@ -1,3 +1,3 @@
 #!/bin/bash
-
-cp ./others/list * ./exper/voc12/list
+cd ./others/list
+cp *.txt ../../exper/voc12/list/
