@@ -18,6 +18,7 @@ mv VOCdevkit/VOC2012 VOC2012_orig && rm -r VOCdevkit
 echo "下载完成"
 
 echo "开始第一步，增强数据集mat2png的转换..."
+cd ../
 sh ./data_aug.sh
 echo "转换完成"
 
