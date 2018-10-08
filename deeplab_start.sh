@@ -19,7 +19,7 @@ mkdir -p ./exper/voc12/res
 
 echo "创建文件夹成功，用来存放txt,log,model等内容"
 echo "开始下载model和prototxt,放进新建文件夹"
-./dowload_model.sh
+sh ./dowload_model.sh
 
 echo "完成.."
 
