@@ -15,6 +15,6 @@ rm -rf *.prototxt
 rm -rf *caffemodel
 
 echo "开始转移list.."
-./mvlist.sh
+sh./mvlist.sh
 
 echo "完成，接下来走第二步"
